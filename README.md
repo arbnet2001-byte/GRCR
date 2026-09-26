@@ -1,4 +1,6 @@
-# GRCR
+# Get Rates
+
+Website for https://get-rates.com.
 
 Static, SEO-ready website in `site/` (plain HTML/CSS, no build step).
 
@@ -6,19 +8,13 @@ Static, SEO-ready website in `site/` (plain HTML/CSS, no build step).
 
 | File | Purpose |
 |------|---------|
-| `site/index.html`, `services/`, `about/`, `contact/` | Pages with unique titles, meta descriptions, canonical URLs, Open Graph/Twitter tags and JSON-LD (Organization, WebSite, WebPage, BreadcrumbList, Service) |
+| `site/index.html`, `services/`, `about/`, `contact/` | Pages with unique titles, meta descriptions, canonical URLs, Open Graph/Twitter tags |
 | `site/404.html` | Not-found page (`noindex`) |
 | `site/robots.txt`, `site/sitemap.xml` | Crawl rules and sitemap |
 | `site/llms.txt` | Site summary for AI assistants |
 | `site/site.webmanifest`, `site/favicon.svg`, `site/images/` | Icons and social share image |
 
 Preview locally: `python3 -m http.server -d site 8000`, then open http://localhost:8000.
-
-`https://grcr.example.com` is a placeholder domain. Replace it everywhere once the real domain is known:
-
-```sh
-grep -rl 'grcr.example.com' site | xargs sed -i 's#grcr.example.com#www.your-domain.com#g'
-```
 
 ## SEO tooling
 

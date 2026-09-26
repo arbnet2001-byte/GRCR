@@ -1,6 +1,6 @@
 {
-  "name": "GRCR",
-  "short_name": "GRCR",
+  "name": "Get Rates",
+  "short_name": "Get Rates",
   "start_url": "/",
   "display": "browser",
   "background_color": "#ffffff",

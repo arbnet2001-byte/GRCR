@@ -1,10 +1,10 @@
-# GRCR
+# Get Rates
 
-> GRCR provides consultation, delivery and ongoing support with clear pricing and replies within one business day.
+> Get Rates provides consultation, delivery and ongoing support with clear pricing and replies within one business day.
 
 ## Pages
 
-- [Home](https://grcr.example.com/): Overview of GRCR and what we do
-- [Services](https://grcr.example.com/services/): Consultation, delivery and support, with FAQs
-- [About](https://grcr.example.com/about/): Who we are and how we work
-- [Contact](https://grcr.example.com/contact/): How to request a free consultation
+- [Home](https://get-rates.com/): Overview of Get Rates and what we do
+- [Services](https://get-rates.com/services/): Consultation, delivery and support, with FAQs
+- [About](https://get-rates.com/about/): Who we are and how we work
+- [Contact](https://get-rates.com/contact/): How to request a free consultation
