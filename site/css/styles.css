@@ -5,6 +5,7 @@
   --muted: #5a6270;
   --accent: #1f5fbf;
   --accent-contrast: #ffffff;
+  --good: #1a7f37;
   --border: #dde1e7;
   --radius: 10px;
   --max: 68rem;
@@ -19,6 +20,7 @@
     --muted: #a3abb8;
     --accent: #6ea2f0;
     --accent-contrast: #0d1117;
+    --good: #4ac26b;
     --border: #2c313a;
   }
 }
@@ -204,4 +206,87 @@ h1 {
   padding-block: 2rem;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+/* Landing pages */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facts li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+
+.facts strong {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.facts span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+table.compare {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.compare caption {
+  caption-side: bottom;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.compare th,
+.compare td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.compare thead th {
+  background: var(--surface);
+}
+
+.compare td.best {
+  font-weight: 700;
+  color: var(--good);
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--good);
+  color: var(--accent-contrast);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.summary {
+  border-left: 4px solid var(--accent);
+  background: var(--surface);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
 }
