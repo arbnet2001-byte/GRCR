@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Places to stay in France</title>
+<meta name="description" content="France hotels, apartments, B&Bs and resorts. Browse travel destinations and find accommodation near top attractions" />
+<meta name="keywords" content="hotels France,accommodation France,cheap accommodation in France,France hotel deals,where to stay in France" />
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="Style01.css" />
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="IE_specific.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="IE_specific.css" />
+<![endif]-->
+<script type="text/javascript" src="JScript01.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J591KMNMRC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J591KMNMRC');
+</script>
+ <DIV class="frame_full" style="background:#fff;box-shadow:0 0px 3px #999">
+<DIV class="frame_defined" style="border-right: 6px solid #fff;">
+<div class="top_nav_logo">
+<a href="https://m.get-rates.com/" title="Places to stay in France">m.get-rates.com</a>
+</div>
+<div class="nav_heading"><h1>Compare prices on Hotels in France</h1></div><div id="top_nav2">
+<ul>
+<li class="t_search" onclick="openSideSearch();closeNav();_gaq.push(['_trackEvent', 'Menu', 'Tools']);">&nbsp;</li>
+<li class="t_menu" onclick="openNav();closeSideSearch();_gaq.push(['_trackEvent', 'Menu', 'Tools']);">&nbsp;</li>
+</ul>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav();hide('properties_all');">&times;</a>
+  <ul>
+<li><a href="https://m.get-rates.com/dealfinder-50-France.html">Cities</a></li><li><a href="countries.php">Countries</a></li>
+<li><a href="javascript:void(0);" onclick="openMostViewed();">Destinations <svg width="16" height="16" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 4L10 8L6 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a></li>
+</ul>
+<ul class="settings1">
+<li><div class="howitw"><a href="https://m.get-rates.com/howitworks.php">How it Works?</a></div></li>
+<li><div class="all_partners"><a href="allpartners.php">Partners</a></div></li>
+<li></li>
+<li style="padding-left:32px!important"><a href="contact_us.php">Feedback</a></li>
+<li style="padding-left:32px!important"><a href="TermsOfUse.php">Privacy</a></li>
+</ul>
+<div class="dealsToinbox">
+    <div class="dealsToinbox_content">
+<span style="display:block;font-size:18px;font-weight:bold;color:#0054AE">Latest deals, straight to your inbox!</span>
+<p style="font-size:13px;font-weight:normal;margin:5px 0;color:#767676">Receive great hotel deals every week.</p>
+</div>
+<!--Error and success message wrapper-->
+<div id="errAll3"></div>
+<!--Lists of comments posts wrapper-->
+<div class="commentpost3"></div>
+
+<form id="isubscribe3" method="post">
+<input type="text" name="email" id="email3" autocomplete="off" placeholder="Enter your email address"> <input type="submit" name="submitter" value="Send email" class="smail" id="submitter3"> <input type="hidden" name="task" id="task3" value="addComments" />
+</form>
+
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	$("#isubscribe3").submit(function(){
+		ctask3 = this.task.value;
+		cemail3 = this.email.value;
+		submitter3 = this.submitter;
+
+
+		var data = {
+			task: ctask3,
+			email: cemail3
+		};
+		$.post("subscribe.php", data, function( response ) {
+			if( '0' == response ) {
+				$("#errAll3").html('<strong style="color:#ff6000">Invalid email address.</strong>');
+			 } else if( '1' == response ) {
+                $("#errAll3").html('<strong style="color:#ff6000">Invalid email address.</strong>');
+			} else {
+$(".commentpost3").html('<strong>Thank you</strong>. You are now subscribed');
+				submitter3.value="Subscribed";
+				submitter3.disabled=true;
+				$(response).appendTo($(".commentpost3"));
+			}
+		});
+
+		return false;
+
+	});
+});
+</script>
+</div>
+</div>
+<div style="clear:right"></div>
+</div>
+</div>
+<div id="SideSearch" class="side_search">
+<div style="padding:15px 0 0 0">
+<a href="javascript:void(0)" class="closebtn" onclick="closeSideSearch()">&times;</a>
+<div>
+<form method="get" name="SearchDeal" id="SearchDeal">
+<div class="search_results" style="display:block">
+		  <div style="margin-left:10px"><span style="display:block;padding:0 0 5px 0;font-size:16px">Where are you going?</span><input name="cityId" id="selectedCityId2" type="hidden"><input name="filename" id="selectedFileName2" type="hidden" autocomplete="off" ><input id="citySearch2" onkeyup="searchSuggest2();removeTags();" type="text" class="side_search_box_text" style="margin-left:0px" placeholder="Enter destination or city name" autocomplete="off" autocorrect="off" spellcheck="false"><div class="side_search_box_button" style="width:60px;margin-left:3px" onClick="SearchCityDeal();_gaq.push(['_trackEvent', 'Quick', 'Search']);">Go</div><div id="citySuggest2" class="citySuggest" style="position:absolute;z-index:99999!important"></div></div>  </div>
+<input id="aff_booking3" value="" type="hidden" checked>
+<input id="in3" name="checkin" value="10/04/2026" type="hidden">
+<input id="out3" name="checkout" value="10/05/2026" type="hidden">
+<input id="adults2_1" name="adults_1" value="2" type="hidden">
+<input id="Rooms2_1" name="Rooms" value="1" type="hidden">
+<input id="childAges_1_2" name="childAges_1" value="" type="hidden">
+<input name="label" type="hidden" id="label2_3" value="_PNF" />
+</form>
+</div>
+</div>
+</div>
+
+<div id="pop_locations">
+<h3>Popular destinations this month</h3>
+<div><a href="javascript:void(0)" class="closebtn" onclick="closeMostViewed();">&times;</a></div>
+<ul>
+<li><a href="Accommodation-Dubrovnik-g100_534.html">Dubrovnik hotels</a></li>
+<li><a href="Accommodation-Athens-g43_198.html">Athens hotels</a></li>
+<li><a href="Accommodation-Reykjavik-g591_6755.html">Reykjavik hotels</a></li>
+<li><a href="Accommodation-Istanbul-g38_383.html">Istanbul hotels</a></li>
+<li><a href="Accommodation-London-g56_257.html">London hotels</a></li>
+<li><a href="Accommodation-Prague-g205_243.html">Prague hotels</a></li>
+<li><a href="Accommodation-Marrakech-g17_457.html">Marrakech hotels</a></li>
+<li><a href="Accommodation-Barcelona-g4_287.html">Barcelona hotels</a></li>
+<li><a href="Accommodation-Paris-g50_119.html">Paris hotels</a></li>
+<li><a href="Accommodation-Amsterdam-g253_1840.html">Amsterdam hotels</a></li>
+<li><a href="Accommodation-Aspen-g1_180_1652.html">Aspen hotels</a></li>
+<li><a href="Accommodation-Gran-Canaria-g4_37052.html">Gran Canaria hotels</a></li>
+<li><a href="Accommodation-Santorini-g43_45219.html">Santorini hotels</a></li>
+<li><a href="Accommodation-Tenerife-g4_13622.html">Tenerife hotels</a></li>
+<li><a href="Accommodation-Oslo-g406_742.html">Oslo hotels</a></li>
+<li><a href="Accommodation-Rome-g36_518.html">Rome hotels</a></li>
+<li><a href="Accommodation-Nice-g50_2016.html">Nice hotels</a></li>
+<li><a href="Accommodation-Mammoth-Lakes-g1_349_7470.html">Mammoth Lakes hotels</a></li>
+<li><a href="Accommodation-Krabi-g13_216.html">Krabi hotels</a></li>
+<li><a href="Accommodation-Bangkok-g13_19.html">Bangkok hotels</a></li>
+<li><a href="Accommodation-Bora-Bora-g7282_7575.html">Bora Bora hotels</a></li>
+<li><a href="Accommodation-Tahiti-g7282_35654.html">Tahiti hotels</a></li>
+</ul>
+</div>
+
+<div class="copyHeading">Search all hotel deals, <em>in one place.</em>
+<p><a href="RateGuarantee.htm">Best rate Guaranteed</a></p>
+</div>
+<DIV class="frame_full" style="border-top:1px dotted #ccc;background:#F2F4F8">
+<DIV class="frame_defined" style="display:block;background:#F2F4F8">
+<ol id="heading_breadcrumb" class="breadcrumbs">
+		  <li><a href="/"><img src="images/ico_home.png" alt="home" width="18" height="13"></a></li> &#10095; <div>France<span>62,483 results</span></ol>
+<div style="clear:both"></div>
+</DIV>
+</DIV>
+
+<link rel="stylesheet" href="scripts/calendar/DatePicker.css" type="text/css" />
+<script type="text/javascript" src="scripts/calendar/DatePicker_min.js"></script>
+<script type="text/javascript" src="scripts/calendar/DatePicker.js"></script>
+<div class="frame_defined">
+<div class="frame_left" style="padding-top:10px">
+<div id="today_deals_form">
+<DIV id="mainSearchBox">
+<DIV class="td_head_content">
+<table width="100%" style="padding:6px 0 9px 0"><tr><td valign="middle">
+<h3>Find  Hotels in France</h3></td></tr></table>
+<form method="get" name="SearchBoxCityBig" target="_self" id="SearchBoxCityBig">
+    <table width="100%" border="0">
+	        <tr>
+        <td colspan="2" style="padding:5px 0 8px 0">
+		<div style='position:relative;top:0'><input name="cityId" id="selectedCityId" type="hidden"><input name="filename" id="selectedFileName" type="hidden" autocomplete="off" autocorrect="off" spellcheck="false"><input id="citySearch" onkeyup="searchSuggest();removeTags();" type="text" class="ac_input" placeholder="Enter destination or place of interest" autocomplete="off" autocorrect="off" spellcheck="false"><label for="citySearch"> <span>Enter destination or place of interest</span></label><div id="citySuggest" class="citySuggest"></div></div>
+
+		<div id="cal3Container" class="cal3Container" style="display:none"></div>
+<input type="hidden" id="in3" />
+<input type="hidden" id="out3" />
+	   </td>
+        </tr>
+		      <tr>
+<td colspan="2">
+<div>
+<div class="yui-skin-sam" style="position:relative;z-index:99">
+<div id="cal1Container" class="cal1Container"></div>
+</div>
+<div id="this_date" style="display:block">
+<div class="check_in">
+<input type="text" name="checkin" id="in" class="datepicker" placeholder="Check-In" readonly="readonly" />
+<label for="in">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="1.5" color="#767676"><path stroke="#767676" stroke-linecap="round" stroke-linejoin="round" d="M15 4V2m0 2v2m0-2h-4.5M3 10v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9zM3 10V6a2 2 0 0 1 2-2h2M7 2v4M21 10V6a2 2 0 0 0-2-2h-.5"/></svg>&nbsp;Check-In</label>
+</div>
+<div class="check_out">
+<input type="text" name="checkout" id="out" class="datepicker" placeholder="Check-Out" readonly="readonly" />
+<label for="out">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="1.5" color="#767676"><path stroke="#767676" stroke-linecap="round" stroke-linejoin="round" d="M15 4V2m0 2v2m0-2h-4.5M3 10v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9zM3 10V6a2 2 0 0 1 2-2h2M7 2v4M21 10V6a2 2 0 0 0-2-2h-.5"/></svg>&nbsp;Check-Out</label>
+</div>
+</div></div>
+</td></tr>
+<tr>
+  <td colspan="2">
+		<div class="nodates"><input type="checkbox" id="no_dates_thick" onclick="no_dates('this_date','no_dates_thick');ga('send', 'event', 'No', 'Checkin', 'NoCheckin', '1');" autocomplete="off"> <label for="no_dates_thick">I don't have specific dates yet</label></div></td>
+      </tr>
+
+
+
+		<tr>
+<td><div class="guests"><select id="Guests" name="adults_1" autocomplete="off" onchange="RoomSetup();" aria-label="Guests">
+<option value="1">1 adult, 0 children</option>
+<option value="2" selected>2 adults, 0 children</option>
+<option value="3">More options...</option>
+</select></div>
+<div id="no_dates_button" style="display:none">
+<input type="button" value="Search" class="compare_all" onclick="NoCheckin('filename=France&city_name=France&checkin=10/04/2026&checkout=10/05/2026&state=&cityId=0&label=pid_NoCheckin');"></div>
+
+<div id="with_dates_button" style="display:inline-block">
+<input type="button" value="Search" class="compare_all" onclick="Aff_Bookingcom();TodayDeal();_gaq.push(['_trackEvent', 'Today', 'Deal']);">
+		  		  <input name="cityId" id="cityId" type="hidden" value="0">
+		  <input name="state" id="state" type="hidden" value="">
+          <input name="label" type="hidden" id="label" value="SF_xSBC" />
+</div>
+</td>
+</tr>
+<tr><td colspan="2">
+<div id="show_rooms_config">
+Rooms
+<select name="Rooms" id="Rooms" autocomplete="off">
+<option value="1" selected>1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+</select>
+Adults
+<select name="adults_1" id="adults" autocomplete="off">
+<option value="1">1</option>
+<option value="2" selected>2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+</select>
+Children
+<select name="childAges_1" id="childAges_1" autocomplete="off">
+<option value="" selected>0</option>
+<option value="0">1</option>
+<option value="0,0">2</option>
+<option value="0,0,0">3</option>
+<option value="0,0,0,0">4</option>
+</select>
+</div>
+</td></tr>
+
+      <tr>
+        <td colspan="2">
+<div id="other_sites">
+Compare vs GetRates: <span><input id="aff_booking" value="" type="checkbox" checked><label for="aff_booking">Booking.com</label> <input id="aff_agoda" value="" type="checkbox"><label for="aff_agoda">Agoda.com</label>
+</span>
+</div>
+<div class="addoptions">
+<div id="2" style="margin-top:7px" onclick="expandOpt(1,2);"><img src="https://assets.get-rates.com/images/arrow_next_white.svg" alt="aright"> <a href="javascript:void(0);">Additional search options</a></div>
+</div>
+</td>
+      </tr>
+	  <tr>
+        <td colspan="2">
+		<div id="1" class="properties">
+		<table>
+  <tr>
+    <td><strong>Property Type</strong>
+<ul>
+<li><input type="checkbox" name="propertyType" value="0" />Hotel</li>
+<li><input type="checkbox" name="propertyType" value="9"  />Apartment</li>
+<li><input type="checkbox" name="propertyType" value="3"  />Bed &amp; Breakfast</li>
+<li><input type="checkbox" name="propertyType" value="7"  />Resort</li>
+<li><input type="checkbox" name="propertyType" value="1"  />Motel</li>
+<li><input type="checkbox" name="propertyType" value="4"  />Vacation Rental</li>
+<li><input type="checkbox" name="propertyType" value="5"  />Hostel</li>
+</ul>
+<td style="vertical-align: top"><strong>Star rating</strong>
+<ul>
+<li><input type="checkbox" name="star1" value="true" />1 star</li>
+<li><input type="checkbox" name="star2" value="true" />2 star</li>
+<li><input type="checkbox" name="star2" value="true" />3 star</li>
+<li><input type="checkbox" name="star2" value="true" />4 star</li>
+<li><input type="checkbox" name="star2" value="true" />5 star</li>
+<li><input type="checkbox" name="star2" value="true" />Unrated</li></ul>
+</td>
+  </tr>
+  <tr>
+    <td><strong>Guest rating</strong>
+<ul>
+<li><input type="checkbox" name="guestRatings" value="9" />Superb: 9+</li>
+<li><input type="checkbox" name="guestRatings" value="8" />Very Good: 8+</li>
+<li><input type="checkbox" name="guestRatings" value="7" />Good: 7+</li>
+<li><input type="checkbox" name="guestRatings" value="6" />Pleasant: 6+</li>
+<li><input type="checkbox" name="guestRatings" value="-1" />No rating</li></ul></td>
+    <td><strong>Sort result by</strong>
+<ul>
+<li><input type="checkbox" name="sort" value="Name-asc" />Property name</li>
+<li><input type="checkbox" name="sort" value="Rating-desc" />Star rating</li>
+<li><input type="checkbox" name="sort" value="Distance-asc" />Distance</li>
+<li><input type="checkbox" name="sort" value="Popularity-desc" />Guest rating</li>
+<li><input type="checkbox" name="sort" value="MinRate-asc" />Price</li></ul></td>
+  </tr>
+</table>
+</div>
+		</td>
+      </tr>
+    </table>
+  </form>
+  </DIV>
+</DIV>
+</div>
+<div class="announce" onclick="doBlink()">
+	<div class="ann_heading">
+	<span>Search. Compare. Save time & money</span>
+	<p style="padding-left:2px">Room availability is limited. Don't miss today's deals!</p>
+	</div>
+	</div>
+	<div class="announce3" onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );doBlink();"></div>
+</div></div>
+<div id="outline_big" class="frame_defined" style="padding-bottom:10px">
+<div class="frame_right"><div id="right_featured_destinations" style="padding:15px 0 0 0">
+<h3 style="font-size:24px;font-weight:500">Destinations in France</h3>
+<div class="separator"></div>
+<ul>
+<li><a href="https://m.get-rates.com/Accommodation-Paris-g50_119.html"><div style="background: url(https://assets.get-rates.com/images/photo_coming_soon_small.png) 50% 10px no-repeat; background-size:auto"><div class="list_place" style="background: url(https://cdn.get-rates.com/images/destinations/43958.jpg) left top no-repeat; background-size: 100% 100%"><div class="list_dest"><span>Paris<p>5964 properties</p></span></div></div></div></a>
+<div class="places"><a href="https://m.get-rates.com/Accommodation-Paris-g50_119.html">1709 hotels</a> <a href="https://m.get-rates.com/Bed-and-Breakfast-Paris-bbs-50_119.html">35 b&bs</a> <a href="https://m.get-rates.com/Vacation-Rentals-Paris-vrnt-50_119.html">2 vacation rentals</a> <a href="https://m.get-rates.com/Apartments-Paris-apt-50_119.html">1210 apartments</a> </div><p class="seemore"><a href="https://m.get-rates.com/Accommodation-Paris-g50_119.html">See more places in Paris</a></p></li><li><a href="https://m.get-rates.com/Accommodation-Cannes-g50_2379.html"><div style="background: url(https://assets.get-rates.com/images/photo_coming_soon_small.png) 50% 10px no-repeat; background-size:auto"><div class="list_place" style="background: url(https://cdn.get-rates.com/images/destinations/44081.jpg) left top no-repeat; background-size: 100% 100%"><div class="list_dest"><span>Cannes<p>1452 properties</p></span></div></div></div></a>
+<div class="places"><a href="https://m.get-rates.com/Accommodation-Cannes-g50_2379.html">148 hotels</a> <a href="https://m.get-rates.com/Bed-and-Breakfast-Cannes-bbs-50_2379.html">5 b&bs</a> <a href="https://m.get-rates.com/Vacation-Rentals-Cannes-vrnt-50_2379.html">2 vacation rentals</a> <a href="https://m.get-rates.com/Apartments-Cannes-apt-50_2379.html">440 apartments</a> </div><p class="seemore"><a href="https://m.get-rates.com/Accommodation-Cannes-g50_2379.html">See more places in Cannes</a></p></li><li><a href="https://m.get-rates.com/Accommodation-Nice-g50_2016.html"><div style="background: url(https://assets.get-rates.com/images/photo_coming_soon_small.png) 50% 10px no-repeat; background-size:auto"><div class="list_place" style="background: url(https://cdn.get-rates.com/images/destinations/147578.jpg) left top no-repeat; background-size: 100% 100%"><div class="list_dest"><span>Nice<p>1354 properties</p></span></div></div></div></a>
+<div class="places"><a href="https://m.get-rates.com/Accommodation-Nice-g50_2016.html">208 hotels</a> <a href="https://m.get-rates.com/Bed-and-Breakfast-Nice-bbs-50_2016.html">20 b&bs</a> <a href="https://m.get-rates.com/Vacation-Rentals-Nice-vrnt-50_2016.html">7 vacation rentals</a> <a href="https://m.get-rates.com/Apartments-Nice-apt-50_2016.html">280 apartments</a> </div><p class="seemore"><a href="https://m.get-rates.com/Accommodation-Nice-g50_2016.html">See more places in Nice</a></p></li><li><a href="https://m.get-rates.com/Accommodation-Chamonix-Mont-Blanc-g50_5411.html"><div style="background: url(https://assets.get-rates.com/images/photo_coming_soon_small.png) 50% 10px no-repeat; background-size:auto"><div class="list_place" style="background: url(https://cdn.get-rates.com/images/destinations/42476.jpg) left top no-repeat; background-size: 100% 100%"><div class="list_dest"><span>Chamonix-Mont-Blanc<p>597 properties</p></span></div></div></div></a>
+<div class="places"><a href="https://m.get-rates.com/Accommodation-Chamonix-Mont-Blanc-g50_5411.html">51 hotels</a> <a href="https://m.get-rates.com/Bed-and-Breakfast-Chamonix-Mont-Blanc-bbs-50_5411.html">4 b&bs</a> <a href="https://m.get-rates.com/Vacation-Rentals-Chamonix-Mont-Blanc-vrnt-50_5411.html">5 vacation rentals</a> <a href="https://m.get-rates.com/Apartments-Chamonix-Mont-Blanc-apt-50_5411.html">244 apartments</a> </div><p class="seemore"><a href="https://m.get-rates.com/Accommodation-Chamonix-Mont-Blanc-g50_5411.html">See more places in Chamonix-Mont-Blanc</a></p></li><li><a href="https://m.get-rates.com/Accommodation-Lyon-g50_788.html"><div style="background: url(https://assets.get-rates.com/images/photo_coming_soon_small.png) 50% 10px no-repeat; background-size:auto"><div class="list_place" style="background: url(https://cdn.get-rates.com/images/destinations/41620.jpg) left top no-repeat; background-size: 100% 100%"><div class="list_dest"><span>Lyon<p>552 properties</p></span></div></div></div></a>
+<div class="places"><a href="https://m.get-rates.com/Accommodation-Lyon-g50_788.html">116 hotels</a> <a href="https://m.get-rates.com/Bed-and-Breakfast-Lyon-bbs-50_788.html">15 b&bs</a> <a href="https://m.get-rates.com/Vacation-Rentals-Lyon-vrnt-50_788.html">1 vacation rentals</a> <a href="https://m.get-rates.com/Apartments-Lyon-apt-50_788.html">149 apartments</a> </div><p class="seemore"><a href="https://m.get-rates.com/Accommodation-Lyon-g50_788.html">See more places in Lyon</a></p></li><li><a href="https://m.get-rates.com/Accommodation-Marseille-g50_442.html"><div style="background: url(https://assets.get-rates.com/images/photo_coming_soon_small.png) 50% 10px no-repeat; background-size:auto"><div class="list_place" style="background: url(https://cdn.get-rates.com/images/destinations/42147.jpg) left top no-repeat; background-size: 100% 100%"><div class="list_dest"><span>Marseille<p>419 properties</p></span></div></div></div></a>
+<div class="places"><a href="https://m.get-rates.com/Accommodation-Marseille-g50_442.html">111 hotels</a> <a href="https://m.get-rates.com/Bed-and-Breakfast-Marseille-bbs-50_442.html">20 b&bs</a> <a href="https://m.get-rates.com/Vacation-Rentals-Marseille-vrnt-50_442.html">5 vacation rentals</a> <a href="https://m.get-rates.com/Apartments-Marseille-apt-50_442.html">76 apartments</a> </div><p class="seemore"><a href="https://m.get-rates.com/Accommodation-Marseille-g50_442.html">See more places in Marseille</a></p></li><li><a href="https://m.get-rates.com/Accommodation-Bordeaux-g50_848.html"><div style="background: url(https://assets.get-rates.com/images/photo_coming_soon_small.png) 50% 10px no-repeat; background-size:auto"><div class="list_place" style="background: url(https://cdn.get-rates.com/images/destinations/41844.jpg) left top no-repeat; background-size: 100% 100%"><div class="list_dest"><span>Bordeaux<p>357 properties</p></span></div></div></div></a>
+<div class="places"><a href="https://m.get-rates.com/Accommodation-Bordeaux-g50_848.html">72 hotels</a> <a href="https://m.get-rates.com/Bed-and-Breakfast-Bordeaux-bbs-50_848.html">26 b&bs</a> <a href="https://m.get-rates.com/Vacation-Rentals-Bordeaux-vrnt-50_848.html">2 vacation rentals</a> <a href="https://m.get-rates.com/Apartments-Bordeaux-apt-50_848.html">95 apartments</a> </div><p class="seemore"><a href="https://m.get-rates.com/Accommodation-Bordeaux-g50_848.html">See more places in Bordeaux</a></p></li><li><a href="https://m.get-rates.com/Accommodation-Biarritz-g50_2323.html"><div style="background: url(https://assets.get-rates.com/images/photo_coming_soon_small.png) 50% 10px no-repeat; background-size:auto"><div class="list_place" style="background: url(https://cdn.get-rates.com/images/destinations/45668.jpg) left top no-repeat; background-size: 100% 100%"><div class="list_dest"><span>Biarritz<p>287 properties</p></span></div></div></div></a>
+<div class="places"><a href="https://m.get-rates.com/Accommodation-Biarritz-g50_2323.html">63 hotels</a> <a href="https://m.get-rates.com/Bed-and-Breakfast-Biarritz-bbs-50_2323.html">2 b&bs</a> <a href="https://m.get-rates.com/Vacation-Rentals-Biarritz-vrnt-50_2323.html">2 vacation rentals</a> <a href="https://m.get-rates.com/Apartments-Biarritz-apt-50_2323.html">46 apartments</a> </div><p class="seemore"><a href="https://m.get-rates.com/Accommodation-Biarritz-g50_2323.html">See more places in Biarritz</a></p></li></ul>
+<div style="clear:both"></div>
+<div class="count"><a href="https://m.get-rates.com/dealfinder-50-France.html">More Destinations > </a></div>
+</div><div style="clear:both"></div>
+</div><div class="frame_left"><div class="around_places" style="display:block">
+<span class="tab_label_main" style="padding-top:15px">France Overview</span>
+<div class="poitabs">
+<div id="cities"><span class="tab_label">Destinations</span> <p>Browse Hotels in popular cities:</p></div><div id="box_countries_content">
+<ul><li><a href="https://m.get-rates.com/Accommodation-Paris-g50_119.html">Paris, <strong>5964 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Cannes-g50_2379.html">Cannes, <strong>1452 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Nice-g50_2016.html">Nice, <strong>1354 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Chamonix-Mont-Blanc-g50_5411.html">Chamonix-Mont-Blanc, <strong>597 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Lyon-g50_788.html">Lyon, <strong>552 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Marseille-g50_442.html">Marseille, <strong>419 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Bordeaux-g50_848.html">Bordeaux, <strong>357 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Biarritz-g50_2323.html">Biarritz, <strong>287 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Antibes-g50_2514.html">Antibes, <strong>285 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Toulouse-g50_1906.html">Toulouse, <strong>271 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Agde-g50_6576.html">Agde, <strong>266 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Montpellier-g50_1926.html">Montpellier, <strong>259 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Saint-Malo-g50_4766.html">Saint-Malo, <strong>255 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Lille-g50_1490.html">Lille, <strong>246 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Frejus-g50_4402.html">Frejus, <strong>241 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Strasbourg-g50_1168.html">Strasbourg, <strong>238 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Aix-Provence-g50_4131.html">Aix-en-Provence, <strong>228 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Les-Deux-Alpes-g50_1674.html">Les Deux Alpes, <strong>207 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Carcassonne-g50_4236.html">Carcassonne, <strong>201 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Porto-Vecchio-g50_6600.html">Porto-Vecchio, <strong>197 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Honfleur-g50_1907.html">Honfleur, <strong>193 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Saint-Raphael-g50_5043.html">Saint-Raphael, <strong>191 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Lourdes-g50_128.html">Lourdes, <strong>186 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Sainte-Maxime-g50_8485.html">Sainte-Maxime, <strong>182 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Avignon-g50_4164.html">Avignon, <strong>182 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Val-Thorens-g50_741.html">Val Thorens, <strong>171 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Grau-Roi-g50_22995.html">Le Grau-du-Roi, <strong>166 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Arles-g50_4280.html">Arles, <strong>164 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Courchevel-g50_4122.html">Courchevel, <strong>155 Hotels</strong></a></li><li><a href="https://m.get-rates.com/Accommodation-Saint-Jean-Luz-g50_10276.html">Saint-Jean-de-Luz, <strong>152 Hotels</strong></a></li></ul></div><div id="poi" onclick="ViewAll('box_pois_content','poi');"><span class="tab_label">Places of interest</span> <p>Show me hotels near...</p></div><div id="box_pois_content">
+<ul>
+<li><a href="https://m.get-rates.com/Defense-nearby-5156.html">La Defense</a></li>
+<li><a href="https://m.get-rates.com/Louvre-Museum-nearby-5159.html">Louvre Museum</a></li>
+<li><a href="https://m.get-rates.com/Bastille-nearby-5161.html">Bastille</a></li>
+<li><a href="https://m.get-rates.com/Montmartre-nearby-5162.html">Montmartre</a></li>
+<li><a href="https://m.get-rates.com/Muse-Orsay-nearby-5163.html">Musée d&#39Orsay</a></li>
+<li><a href="https://m.get-rates.com/Pantheon-nearby-5169.html">Pantheon</a></li>
+<li><a href="https://m.get-rates.com/Muse-Picasso-nearby-5171.html">Musée Picasso</a></li>
+<li><a href="https://m.get-rates.com/Opra-Strasbourg-nearby-5243.html">Opéra de Strasbourg</a></li>
+<li><a href="https://m.get-rates.com/Strasbourg-Museum-nearby-5246.html">Strasbourg Museum</a></li>
+<li><a href="https://m.get-rates.com/Boulevard-Saint-Germain-nearby-5150.html">Boulevard Saint Germain</a></li>
+<li><a href="https://m.get-rates.com/Les-Halles-nearby-5158.html">Les Halles</a></li>
+<li><a href="https://m.get-rates.com/Notre-Dame-Paris-nearby-5165.html">Notre Dame de Paris</a></li>
+<li><a href="https://m.get-rates.com/Palais-Musique-nearby-5244.html">Palais de la Musique</a></li>
+<li><a href="https://m.get-rates.com/Basilica-Sernin-nearby-5462.html">Basilica of St. Sernin</a></li>
+<li><a href="https://m.get-rates.com/Toulouse-Matabiau-nearby-5465.html">Toulouse-Matabiau</a></li>
+<li><a href="https://m.get-rates.com/Musee-Vieux-Toulouse-nearby-5467.html">Musee du Vieux Toulouse</a></li>
+<li><a href="https://m.get-rates.com/Place-Bourse-nearby-5292.html">Place de la Bourse</a></li>
+<li><a href="https://m.get-rates.com/Musee-Paul-Dupuy-nearby-5468.html">Musee Paul Dupuy</a></li>
+<li><a href="https://m.get-rates.com/Pont-Saint-Jean-nearby-5294.html">Pont de Saint Jean</a></li>
+<li><a href="https://m.get-rates.com/Gare-Lille-Europe-nearby-5473.html">Gare Lille Europe</a></li></ul></div><div id="airports" onclick="ViewAll('box_airports_content','airports');"><span class="tab_label">Airports</span> <p>Show me hotels near...</p></div><div id="box_airports_content">
+<ul><li><a href="https://m.get-rates.com/Roumanieres-EGC-nearby-5285.html">Roumanieres (EGC) hotels</a></li><li><a href="https://m.get-rates.com/Paris-Charles-Gaulle-Airport-nearby-5152.html">Paris-Charles de Gaulle Airport hotels</a></li><li><a href="https://m.get-rates.com/Garenne-nearby-5282.html">La Garenne hotels</a></li><li><a href="https://m.get-rates.com/Lesquin-Airport-nearby-5476.html">Lesquin Airport hotels</a></li><li><a href="https://m.get-rates.com/Laleu-nearby-5488.html">Laleu hotels</a></li><li><a href="https://m.get-rates.com/Caen-Carpiquet-Airport-nearby-5364.html">Caen - Carpiquet Airport hotels</a></li><li><a href="https://m.get-rates.com/Lorient-South-Brittany-Airport-nearby-5395.html">Lorient South Brittany Airport hotels</a></li><li><a href="https://m.get-rates.com/Rennes-Saint-Jacques-Airport-nearby-5397.html">Rennes - Saint-Jacques Airport hotels</a></li><li><a href="https://m.get-rates.com/Quimper-Cornouaille-Airport-nearby-5400.html">Quimper - Cornouaille Airport hotels</a></li><li><a href="https://m.get-rates.com/Dinard-Pleurtuit-Saint-Malo-Airport-nearby-5402.html">Dinard - Pleurtuit - Saint-Malo Airport hotels</a></li></ul></div><div id="accomm" onclick="ViewAll('box_properties_content','accomm');"><span class="tab_label">Property types</span> <p>Different ways to stay in France:</p></div><div id="box_properties_content">
+<ul>
+<li><a href="https://m.get-rates.com/Accommodation-France-g50.html" title="France Hotel">17034 Hotels</a></li>
+<li><a href="https://m.get-rates.com/Apartments-France-apt-50.html" title="France Apartment">6545 Apartments</a></li>
+<li><a href="https://m.get-rates.com/Bed-and-Breakfast-France-bbs-50.html" title="France B&B">4528 B&Bs</a></li>
+<li><a href="https://m.get-rates.com/Hostels-France-hstl-50.html" title="France Hostel">173 Hostels</a></li>
+<li><a href="https://m.get-rates.com/Vacation-Resorts-France-rsrt-50.html" title="France Resort">138 Resorts</a></li>
+<li><a href="https://m.get-rates.com/Inns-and-Cottages-France-inns-50.html" title="France Inn">59 Inns</a></li>
+<li><a href="https://m.get-rates.com/Holiday-Rentals-France-hol-50.html" title="France Holiday Rental">22 Holiday Rentals</a></li>
+<li><a href="https://m.get-rates.com/Motels-France-motl-50.html" title="France Motel">17 Motels</a></li>
+<li><a href="https://m.get-rates.com/Holiday-Retreats-France-rtr-50.html" title="France Retreat">1 Retreats</a></li></ul></div><div id="topsearch" onclick="ViewAll('box_searches_content','topsearch');"><span class="tab_label">Popular chains</span> <p>Top chains in France:</p></div><div id="box_searches_content" style="display:none">
+<ul>
+ <li><a href="https://m.get-rates.com/Best-Western-Hotels-France-bw-50.html" title="Best Western hotels in France">Best Western hotels France</a></li>
+ <li><a href="https://m.get-rates.com/Embassy-Suites-byHilton-France-uk-50.html" title="Embassy Suites by Hilton in France">Embassy Suites France</a></li>
+ <li><a href="https://m.get-rates.com/Hampton-Inn-Suites-France-hi-50.html" title="Hampton by Hilton in France">Hampton Inn France</a></li>
+  <li><a href="https://m.get-rates.com/Hilton-Hotels-France-h-50.html" title="Hilton hotels in France">Hilton hotels France</a></li>
+   <li><a href="https://m.get-rates.com/Holiday-Inn-Express-Hotels-France-ihg-50.html" title="Holiday Inn Express in France">Holiday Inn Express France</a></li>
+	<li><a href="https://m.get-rates.com/Hyatt-Hotels-France-hy-50.html" title="Hyatt hotels in France">Hyatt hotels France</a></li>
+	<li><a href="https://m.get-rates.com/Intercontinental-Hotels-France-ic-50.html" title="Intercontinental hotels in France">Intercontinental France</a></li>
+  <li><a href="https://m.get-rates.com/Marriott-Hotels-France-jw-50.html" title="Marriott hotels in France">Marriott hotels France</a></li>
+  <li><a href="https://m.get-rates.com/Sheraton-Hotels-France-s-50.html" title="Sheraton hotels in France">Sheraton hotels France</a></li>
+
+  <li><a href="https://m.get-rates.com/Starwood-Hotels-France-ch-50.html" title="Starwood hotels in France">Starwood hotels France</a></li>
+  <li><a href="https://m.get-rates.com/Travelodge-Hotels-France-el-50.html" title="Travelodge hotels in France">Travelodge hotels France</a></li>
+  <li><a href="https://m.get-rates.com/Wyndham-Hotels-France-ww-50.html" title="Wyndham hotels in France">Wyndham hotels France</a></li></ul></div></div></div>
+<div style="clear:both"></div>
+<div style="margin:10px 0 10px 0"></div>
+</div><div class="frame_left">
+<div id="location_overview">
+<fieldset><legend><img src="https://assets.get-rates.com/images/guide.png" alt="Country guide icon" aria-label="Country guide" oncontextmenu="return false;" draggable="false" align="absmiddle"> France Guide</legend>
+<div>How can anyone govern a country that has two hundred and forty-six different kinds of cheese? <em>(Charles de Gaulle, French president, 1oct. 1962)</em>. If would be alive today, General de Gaulle would revise his statement - France now boasts with over 400 varieties of cheese, suggesting the country's cultural variety. Most of the french originality is because its territory is found in all major regions of the continent, each with its own personality. Both the diversity of landscape and tumultuous history of political leadership, formed the customs, language and attitude of people. Stereotypes die hard, so the French are still represented in white striped shirt, black and Basque, Gauloise smoking a cigarette and having a string of onions round the neck. Of course it is very unlikely to meet such a thing in France, but the countryside still...</div>
+
+
+<div align="center" style="display:block;margin-top:10px"><a href="javascript:void(0);" id="overview-show" onclick="read_more('overview');return false;"><img src="https://assets.get-rates.com/images/ico_arrow_down.png" alt="Downward arrow" aria-label="Expand dropdown"></a></div>
+<div id="overview" style="display:none">
+ins centuries-old traditions and lifestyle of the old days. You can rediscover the charm of the old France in its villages and markets, traditions and regional specialties. Its charm transpires in the chic boulevards of Paris, the sparkling ski slopes of the Alps, sunny vineyards and golden beaches, a game of Boules or the coffee and the croisant in a hidden village. If you have all the time in the world, you can stroll through France living an unforgettable experience, but if you have
+  a limited time, you should not miss the most important <strong>attractions</strong> like:
+<ul>
+  <li>Beautiful <a href="Accommodation-Paris-g50_119.html">Paris</a> and
+    its famous <strong>Eiffel Tower, Notre Dame, Arc de Triomphe, Champs Elysees,
+    Sacre Coeur</strong> in the heart of <strong>Montmartre</strong> and <strong>Louvre</strong> pyramid. </li>
+  <li>Take a step back in time at the castle of <a href="Cheap-Hotels-France-Versailles-g20045_20154.html">Versailles</a> and
+    enjoy the fireworks show of the summer. </li>
+  <li>Visit one of the many castles of the Loire valley like Blois, Chambord,
+    Chenonceau, Azay le Rideau and Chinon.</li>
+  <li> Watch out the tide when you visit Mont St Michel in Brittany.</li>
+  <li>Admire rough atmosphere of Corsica, the island consists of two departments
+    of France, with picturesque towns <strong><a href="Cheap-Hotels-France-Bastia-g20045_22239.html">Bastia</a></strong> and <strong><a href="Cheap-Hotels-France-Ajaccio-g20045_22408.html">Ajaccio</a></strong>,
+    famous because of Napoleon.</li>
+  <li>Discover the <strong><a href="Cheap-Hotels-France-Millau-g20045_21081.html">Millau</a></strong> bridge,
+    designed by British architect Norman Foster.</li>
+  <li>Visit 2000 years old Pont du Grant. The roman aqueduct is one of the greatest
+    architectural achievements of humanity. </li>
+  <li>In the south you can admire the roman and gallic ruins of Languedos-Roussillon
+    region. Maison Carre, Diana's Temple and Roman Arenas of Nimes, &quot;Rome of
+    Wales&quot;, are among the finest examples of greco-roman architecture.</li>
+  <li>Visit Papal Palace in <em><a href="Cheap-Hotels-France-Avignon-g20045_22288.html">Avignon</a></em> and
+    nearby is the Roman amphitheater and the ruins of <em><a href="Cheap-Hotels-France-Orange-g20045_20904.html">Orange</a></em>.</li>
+  <li>Visit <em><a href="Accommodation-Marseille-g50_442.html">Marseille</a></em>,
+    the most important commercial port of France on the Mediterranean. Other
+    places of interest include the old port, church Notre Dame de La Garde on
+    top of the hill, several museums, asylum from the Vieille Charite and Chateau
+    d'If.</li>
+  <li>Visit the cathedrals of France, one of which is that of <em><a href="Cheap-Hotels-France-Reims-g20045_20729.html">Reims</a></em>,
+    where the first French king, Clovis, was baptized, Chartres and Tours.</li>
+  <li>Relax in the 80 museums and 200 art galleries of Paris - visit the Orsay
+    Museum housed in a beautiful restored train station, Louvre Palace Modern
+    Art Center George Pampidou or Rodin Museum. Relax in the Luxembourg Gardens
+    in Paris, near the perimeter Latin (boulevards St. Michel and St. Germain),
+    student activity center.</li>
+  <li>Discover the future in the Town of Science and Technology in Villette or
+    the Futuroscope in <strong><a href="Cheap-Hotels-France-Poitiers-g20045_20815.html">Poitiers</a></strong>.</li>
+  <li>Take a visit to Mickey Mouse in Disneyland Resort Paris in <strong><a href="Cheap-Hotels-France-MarnelaVallee-g20045_21143.html">Marne
+        la Vallee</a></strong>. Find <em><a href="Cheap-Hotels-France-MarnelaVallee-g20045_21143.html">cheapest
+        hotel rates in Disneyland Paris</a></em> that will sure meet your low
+        cost accommodation needs, or check the availability for a particular
+        date using the booking engine on the left. </li>
+  <li> Enjoy a wide range of water sports on the 3.000km coast of France. Some
+    famous resorts include St. Enogat and St. Jacut the Emerald Coast in Brittany
+    and <em><a href="Accommodation-Cannes-g50_2379.html">Cannes</a></em>, <em><a href="Accommodation-Nice-g50_2016.html">Nice</a></em>, <a href="Accommodation-Saint-Tropez-g50_12171.html"><em>St
+    Tropez</em></a>, <em><a href="Cheap-Hotels-France-Antibes-g20045_22361.html">Antibes</a></em> and <em><a href="Accommodation-Menton-g50_8978.html">Menton</a></em> on
+    the south coast. </li>
+  <li>Admire the luxury of Cote d'Azur - Walk on the Promenade des Anglais in
+    Nice, famous due to Carnival of Flowers in January, or spend some time among
+    the celebrities at the Cannes Film Festival held in May. </li>
+  <li>Navigate to or from <em><a href="Accommodation-La-Rochelle-g50_1369.html">La
+        Rochelle</a></em>, a popular port placed in the <strong>Charente Maritime</strong>.
+        Nearby, the islands of Oleron and Re linked to the mainland by bridges.</li>
+  <li>Discover winter sports in the French Alps and Pyrenees.</li>
+  <li>Let yourself be pampered at a spa in <em><a href="Cheap-Hotels-France-Biarritz-g20045_22186.html">Biarritz</a></em>,
+    Contrexeville or Vittel.</li>
+  <li>Make a pilgrimage to <em><a href="Cheap-Hotels-France-Lourdes-g20045_21207.html">Lourdes</a></em> situated
+    in the southwest, a place made famous by the visions of Bernadette Soubirous
+    by the mid-nineteenth century. </li>
+  <li>Watch an arenas bullfight in <em><a href="Cheap-Hotels-France-Arles-g20045_22338.html">Arles</a></em> in
+    the south-west.</li>
+  <li>Try your luck at the casino in Monaco or at the <em><a href="Cheap-Hotels-France-Deauville-g20045_21795.html">Deauville</a></em>,
+    famous for the golf course and racetrack. </li>
+  <li>If you have the chance, take part in a grape harvest - there are 10 main
+    wine growing areas, among the most important are Alsace, Burgundy, Champagne
+    and the Rhone Valley, each with its own identity based on grape varieties
+    and soil. </li>
+  <li>Watch Tour de France in cycling, attend to an opera performance in Paris
+    near Roland Garros and bet on a horse at the Prix de l ~ Arc de Triomphe. </li>
+</ul>
+</div>
+
+</fieldset></div>
+</div><div style="clear:both"></div>
+</div>
+<!--TODAY DEALS POPOVER-->
+<DIV id="popover_deals">
+<input type="text" id="in2" name="checkin" class="datepicker" readonly placeholder="Check-in">
+<input type="text" id="out2" name="checkout" class="datepicker" readonly placeholder="Check-out">
+</DIV>
+<!--END TODAY DEALS POPOVER-->
+
+<div id="upper_nav" style="padding:25px 0 0;text-align:center">Different ways to stay in United Kingdom:
+<ul style="padding:5px 0 0 0">
+<li><a href="https://m.get-rates.com/Accommodation-United-Kingdom-g56.html" title="United Kingdom Hotel"><strong>15707</strong> Hotels</a></li>
+<li><a href="https://m.get-rates.com/Bed-and-Breakfast-United-Kingdom-bbs-56.html" title="United Kingdom B&amp;B"><strong>6734</strong> B&amp;Bs</a></li>
+<li><a href="https://m.get-rates.com/Apartments-United-Kingdom-apt-56.html" title="United Kingdom Apartment"><strong>4524</strong> Apartments</a></li>
+<li><a href="https://m.get-rates.com/Inns-and-Cottages-United-Kingdom-inns-56.html" title="United Kingdom Inn"><strong>2033</strong> Inns</a></li>
+<li><a href="https://m.get-rates.com/Hostels-United-Kingdom-hstl-56.html" title="United Kingdom Hostel"><strong>483</strong> Hostels</a></li>
+<li><a href="https://m.get-rates.com/Holiday-Rentals-United-Kingdom-hol-56.html" title="United Kingdom Holiday Rental"><strong>91</strong> Holiday Rentals</a></li>
+<li><a href="https://m.get-rates.com/Vacation-Resorts-United-Kingdom-rsrt-56.html" title="United Kingdom Resort"><strong>65</strong> Resorts</a></li>
+<li><a href="https://m.get-rates.com/Motels-United-Kingdom-motl-56.html" title="United Kingdom Motel"><strong>64</strong> Motels</a></li>
+<li><a href="https://m.get-rates.com/Holiday-Retreats-United-Kingdom-rtr-56.html" title="United Kingdom Retreat"><strong>26</strong> Retreats</a></li></ul>
+</div>
+<div id="bottom_nav">
+<div class="frame_defined" style="background:#0072EC">
+<div class="navigate-left">
+<p>Navigate</p>
+<div class="POIS">
+<div class="top-countries"><p style="color:#fff">Browse by country:</p>
+<a href="https://m.get-rates.com/Accommodation-Australia-g70.html">Australia</a> |
+<a href="https://m.get-rates.com/Accommodation-Austria-g48.html">Austria</a> |
+<a href="https://m.get-rates.com/Accommodation-Brazil-g52.html">Brazil</a> |
+<a href="https://m.get-rates.com/Accommodation-Canada-g117.html">Canada</a> |
+<a href="https://m.get-rates.com/Accommodation-China-g103.html">China</a> |
+<a href="https://m.get-rates.com/Accommodation-France-g50.html">France</a> |
+<a href="https://m.get-rates.com/Accommodation-Germany-g79.html">Germany</a> |
+<a href="https://m.get-rates.com/Accommodation-Greece-g43.html">Greece</a> |
+<a href="https://m.get-rates.com/Accommodation-Indonesia-g31.html">Indonesia</a> |
+<a href="https://m.get-rates.com/Accommodation-Italy-g36.html">Italy</a> |
+<a href="https://m.get-rates.com/Accommodation-Japan-g24.html">Japan</a> |
+<a href="https://m.get-rates.com/Accommodation-Mexico-g84.html">Mexico</a> |
+<a href="https://m.get-rates.com/Accommodation-New-Zealand-g10.html">New Zealand</a> |
+<a href="https://m.get-rates.com/Accommodation-Philippines-g33.html">Philippines</a> |
+<a href="https://m.get-rates.com/Accommodation-Portugal-g139.html">Portugal</a> |
+<a href="https://m.get-rates.com/Accommodation-Spain-g4.html">Spain</a> |
+<a href="https://m.get-rates.com/Accommodation-United-Kingdom-g56.html">United Kingdom</a> |
+<a href="https://m.get-rates.com/Accommodation-United-States-g1.html">United States</a> |
+<a href="https://m.get-rates.com/countries.php">more...</a></div></div>
+<ul>
+<li><a href="countries.php">Countries</a> | </li>
+<li><a href="regions.html">Regions</a> | </li>
+<li><a href="https://m.get-rates.com/dealfinder-50-France.html">Cities</a> | </li><li><a href="districts.html">Districts</a> | </li>
+<li><a href="airports.html">Airports</a> | </li>
+<li><a href="chains.html">Brands</a> | </li>
+<li><a href="landmarks.html">Places of interest</a></li>
+</ul>
+<ul>
+<li><a href="https://m.get-rates.com/">Home</a> | </li>
+<li><a href="countries.php">Browse by country</a> | </li>
+<li><a href="javascript:void(0);" onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );openSideSearch();">Search by hotel name</a></li>
+</ul>
+<ul>
+<li><a href="howitworks.php">How it Works?</a> | </li>
+<li><a href="allpartners.php">Partners</a> | </li>
+<li><a href="HotelChains.php">Hotel chains</a> | </li>
+<li><a href="links.php">Travel links</a></li>
+</ul>
+<div style="line-height:1.5em;margin:20px 0 0;background:#8e8e8e0a;border:1px solid #fff2;border-radius:10px;padding:20px;">
+<p style="margin:0 0 6px">How it Works?</p>
+We search availability and prices for <a href="#Places_to_stay_in_France" style="font-size:12px">France  Hotels</a> from hundreds of travel websites and hotel chains around the world, including <a href="howitworks.php">Booking.com</a>, <a href="howitworks.php">Hotels.com</a>, <a href="howitworks.php">Expedia</a>, <a href="howitworks.php">Ctrip.com</a> and many more. We'll display the best information, hotel rates and deals for any destination, in an instant.</div>
+<div class="pop-dest" style="padding:15px 0 5px 0"><p>Popular destinations:</p>
+<a href="https://m.get-rates.com/Accommodation-Skegness-g56_2484.html">Skegness</a> |
+<a href="https://m.get-rates.com/Accommodation-Torquay-g56_312.html">Torquay</a> |
+<a href="https://m.get-rates.com/Accommodation-Cancun-g84_1080_1344.html">Cancun, Mexico</a> |
+<a href="https://m.get-rates.com/Accommodation-Niagara-Falls-New-York-g1_516_4886.html">Niagara Falls</a> |
+<a href="https://m.get-rates.com/Accommodation-Honolulu-g1_229_1093.html">Honolulu, Hawaii</a> |
+<a href="https://m.get-rates.com/Accommodation-Mykonos-g43_2187.html">Mykonos</a> |
+<a href="https://m.get-rates.com/Accommodation-Kassandra-g43_301.html">Kasandra, Greece</a> |
+<a href="https://m.get-rates.com/Accommodation-Walt-Disney-World-Resort-g65661_65663.html">Disney World</a> |
+<a href="https://m.get-rates.com/Accommodation-Disney-Parks-g65661.html">Disney Parks</a> |
+<a href="https://m.get-rates.com/Accommodation-Punta-Cana-g1051_5610.html">Punta Cana</a>
+</div>
+
+</div>
+<div class="navigate-right">
+<span class="rates_update">Average prices displayed are subject to change at any time.</span>
+For full <a href="TermsOfUse.php" style="line-height:1.7em">terms & conditions click here</a>.
+
+<ul>
+  <li><a href="contact_us.php">Contact us</a></li>
+    <li><a href="TermsOfUse.php">Terms &amp; Conditions</a></li>
+</ul>
+
+<div style="margin-top:25px;background:#8e8e8e0a;border:1px solid #fff2;border-radius:10px;padding:25px">
+<span style="display:block;font-size:18px;font-weight:500">Get the latest deals. Sign up now!</span>
+<p style="color:#fff;font-size:14px;font-weight:300;margin:5px 0 5px 0;">Receive great hotel deals every week.</p>
+<!--Error and success message wrapper-->
+<div id="errAll2"></div>
+<!--Lists of comments posts wrapper-->
+<div class="commentpost"></div>
+
+<form id="isubscribe2" method="post">
+<input type="text" name="email" id="email2" autocomplete="off" placeholder="Enter your email address"> <input type="submit" name="submitter" value="Send email" class="smail" id="submitter2"> <input type="hidden" name="task" id="task2" value="addComments" />
+</form>
+
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	$("#isubscribe2").submit(function(){
+		ctask = this.task.value;
+		cemail = this.email.value;
+		submitter = this.submitter;
+
+
+		var data = {
+			task: ctask,
+			email: cemail
+		};
+		$.post("subscribe.php", data, function( response ) {
+			if( '0' == response ) {
+				$("#errAll2").html('<strong style="color:#ff6000">Invalid email address.</strong>');
+			 } else if( '1' == response ) {
+                $("#errAll2").html('<strong style="color:#ff6000">Invalid email address.</strong>');
+			} else {
+$(".commentpost").html('<strong>Thank you</strong>. You are now subscribed');
+				submitter.value="Subscribed";
+				submitter.disabled=true;
+				$(response).appendTo($(".commentpost"));
+			}
+		});
+
+		return false;
+
+	});
+});
+</script>
+</div>
+<p style="padding-top:10px">Top Destinations</p>
+<div style="line-height:1.7em">
+<a href="Accommodation-Dubai-g159_249.html">Dubai</a> |
+<a href="Accommodation-Brisbane-g70_114_115.html">Brisbane</a> |
+<a href="Accommodation-Acapulco-g84_85_2408.html">Acapulco</a> |
+<a href="Accommodation-Rome-g36_518.html">Rome</a> |
+<a href="Accommodation-Salzburg-g48_320_4509.html">Salzburg</a> |
+<a href="Accommodation-Glasgow-g56_470.html">Glasgow</a> |
+<a href="Accommodation-Auckland-g10_1048.html">Auckland</a> |
+<a href="Accommodation-Dublin-g61_639.html">Dublin</a> |
+<a href="Accommodation-Copenhagen-g850_8029.html">Copenhagen</a> |
+<a href="Accommodation-Quebec-City-g117_1148.html">Quebec</a> |
+<a href="Accommodation-Lisbon-g139_365.html">Lisbon</a> |
+<a href="Accommodation-Prague-g205_243.html">Prague</a> |
+<a href="Accommodation-New-York-City-g1_516_517.html">New York</a> |
+<a href="Accommodation-Geneva-g288_1541.html">Geneva</a> |
+<a href="Accommodation-Venice-g36_307.html">Venice</a>
+</div>
+
+</div>
+<div style="clear:both"></div>
+<div id="bottom_nav_trade">
+    &copy; 2026 <a href="https://m.get-rates.com/">GetRates&trade;</a>
+
+
+        <div class="showDevice">
+<a href="/Accommodation-France-g50.html" class="desktop">Desktop</a> <a href="javascript:void(0);" onclick="AllProperties('filename=France&checkin=2026-10-04&checkout=2026-10-05&mobile=1&label=Device');" class="mobile">Mobile</a>
+</div>
+
+  </div>
+</div>
+</div>
+<div class="frame_full" id="travel_sites"><p>Some of the travel sites we search to save you up to 75% on your hotel deal:</p>
+<ul>
+<li class="bookingcom"></li>
+<li class="expedia"></li>
+<li class="venere"></li>
+<li class="agoda"></li>
+<li class="hotelscom"></li>
+<li class="hoteltravel"></li>
+<li class="many_more"><a href="javascript:void(0);" onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );doBlink();">and many more...</a></li>
+</ul>
+</div>
+</body>
+</html>
